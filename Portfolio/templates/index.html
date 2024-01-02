@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+</head>
+<body>
+
+    <!-- Sealing of the room -->
+    <div class="top"></div>
+    <!-- //Sealing of the room -->
+
+    <!-- Mid portion  -->
+    <div class="hor">
+
+        <!-- Room leftside -->
+        <div class="left">
+            <!-- Door -->
+            <div class="left_door">
+                {% if id > -1 %}
+                    <a id='left_doorknob' href="{% url 'Myapp:room_rev' id %}" ></a>
+                {% else %}    
+                    <a id='left_doorknob' href="" ></a>
+                {% endif %}   
+            </div>
+            <!-- //Door -->
+        </div>
+        <!-- //Room leftside -->
+
+        <!-- Room center -->
+        <div class="face" >
+            <div class="image">
+                <img src="{{input.img.url}}" width="600px" alt="image">
+            </div>
+
+            <!-- Board to add details -->
+            <div class="board">
+                <div class="details">
+                    <ul class="data">
+                        <br><br><br>
+                        <li>Course : {{input.course}}</li>
+                        <li>Institutuon : {{input.institute}}</li>
+                        <li>Year : {{input.year}}</li>
+                        <li>Mark : {{input.mark}}</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //Board to add details -->
+
+        </div>
+        <!-- //Room center -->
+
+        <!-- Room rightside -->
+        <div class="right">
+            <!-- Door -->
+            <div class="right_door">
+                {% if id < 2 %}
+                    <a id='right_doorknob' href="{% url 'Myapp:room_withid' id %}" ></a>
+                {% else %}    
+                    <a id='right_doorknob' href="" ></a>
+                {% endif %}
+            </div>
+            <!-- //Door -->
+        </div>
+        <!-- //Room rightside -->
+
+    </div>
+    <!-- //Mid portion  -->
+
+    <!-- Room floor -->
+    <div class="floor"></div>
+    <!-- //Room floor -->
+
+    <!-- Creators Identity -->
+    <div class="contact">
+        <div class="hi"><h1>Hello..  Created  By  Sandeep ,  Email : sandeepshine865@gmail.com ,  Github : Sandeepzx  </h1></div>
+    </div>
+    <!-- //Creators Identity -->
+    
+</body>
+</html>

@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    overflow: hidden;
+    
+}
+
+.top{
+    height: 0vh;
+    width: 70vw;
+    border-top: 10vh solid rgb(233, 245, 6);
+    border-left: 15vw solid rgb(239,201,30); 
+    border-right: 15vw solid rgb(239,201,30); 
+}
+.hor{
+    display: flex;
+    width: 100vw;
+    height: 75vh;
+}
+.left{
+    background-color: rgb(239,201,30);
+    width: 15%;
+    height: 100%;
+}
+
+
+
+.left_door{
+    position: absolute;
+    left: 0;
+    top: 20%;
+    height: 62%;
+    border-top: 148px solid transparent;
+    border-bottom: 150px solid transparent;
+    border-left: 500px solid #964B00;
+}
+.right_door{
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 62%;
+    border-top: 150px solid transparent;
+    border-bottom: 148px solid transparent;
+    border-right: 500px solid #964B00;
+}
+#left_doorknob {
+    position: relative;
+    top: 50%;
+    left: -130%;
+    height: 80px;
+    width: 70px;
+    background-color: gold;
+    border-radius: 100px;
+    float: right;
+    margin-top: 20px;
+    border: solid 8px black;
+}
+#right_doorknob {
+    position: relative;
+    top: 50%;
+    left: 130%;
+    height: 80px;
+    width: 70px;
+    background-color: gold;
+    border-radius: 100px;
+    float: right;
+    margin-top: 20px;
+    border: solid 8px black;
+}
+.face{
+    background-color: rgb(239,201,30);
+    height: 100%;
+    width: 70%;
+    background-size: cover;
+    border-left: 0.4vh solid rgb(226, 160, 20);
+    border-right: 0.4vh solid rgb(226, 160, 20);
+}
+.board{
+    position: absolute;
+    top: 30%;
+    left: 36%;
+    height: 40%;
+    width: 40%;
+    background-color: rgb(18, 17, 15);
+}
+
+ul{
+    padding-top: 3rem;
+}
+li{
+    position: relative;
+    list-style-type: circle;
+    left: 10%;
+    padding-top: 3rem;
+    color: white;
+    font-size: 100px;
+}
+.right{
+    background-color: rgb(239,201,30);
+    height: 100%;
+    width: 15%;
+}
+.floor{
+    width: 70vw;
+    height: 0vh;
+    border-bottom: 10vh solid rgb(226, 160, 20);
+    border-left: 15vw solid rgb(239,201,30); 
+    border-right: 15vw solid rgb(239,201,30); 
+}
+
+.image {
+    position: absolute;
+    bottom: 10%;
+    left: 18%;
+}
+
+.contact{
+    background-color: rgb(15, 223, 91);
+}
+.hi{
+    font-size: 52px;
+    
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+}
+
+@keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+}
