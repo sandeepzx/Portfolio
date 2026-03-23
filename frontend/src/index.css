@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- Colors: Unified & Cleaned --- */
+  --color-primary: #0ea5e9;
+  --color-secondary: #f97316;
+  --color-background-light: #f6f8f6;
+  --color-background-dark: #102216;
+  
+  /* Page 1 Specifics */
+  --color-home-green: #13ec5b;
+  --color-bg-home-light: #f6f8f6;
+  --color-bg-home-dark: #102216;
+
+  /* Page 2 Specifics (Pitch & Madrid) */
+  --color-pitch: #0B6623;
+  --color-pitch-dark: #1E5631;
+  --color-pitch-primary: #4ade80;
+  --color-pitch-secondary: #22c55e;
+
+  --color-madrid-white: #FFFFFF;
+  --color-madrid-purple: #4B2D83;
+  --color-madrid-gold: #D4AF37;
+  --color-madrid-black: #000000;
+
+  /* UI Elements */
+  --color-bg-light: #f8fafc;
+  --color-sidebar-bg: rgba(255, 255, 255, 0.75);
+  --color-text-main: #1e293b;
+  --color-text-muted: #64748b;
+
+  /* --- Typography --- */
+  /* Merged: Lexend takes priority, Inter as fallback */
+  --font-display: "Lexend", "Inter", sans-serif;
+
+  /* --- Border Radius --- */
+  /* Note: v4 uses --radius-* variables. I kept the larger Page 2 values as overrides */
+  --radius-default: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+
+  /* --- Animations --- */
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  --animate-marquee: marquee 25s linear infinite;
+
+  /* --- Utilities --- */
+  --background-image-grass-pattern: linear-gradient(to bottom, #dcfce7 0%, #f0fdf4 100%);
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: var(--font-display); /* Using your custom display font */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+
+/* 
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec5b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    },
+                    animation: {
+                        marquee: 'marquee 25s linear infinite',
+                    }
+                },
+            },
+        }
+    colors: {
+        pitch: {
+          DEFAULT: '#0B6623', // Pitch green
+          dark: '#1E5631',   // Darker grass shade
+        },
+        madrid: {
+          white: '#FFFFFF',   // Jersey
+          purple: '#4B2D83',  // Numbers & accents
+          gold: '#D4AF37',    // Highlights
+          black: '#000000',   // Strong contrast
+        },
+        "primary": "#0ea5e9","secondary": "#f97316","pitch-primary": "#4ade80",
+        "pitch-secondary": "#22c55e",
+        "background-light": "#f8fafc",
+        "sidebar-bg": "rgba(255, 255, 255, 0.75)",
+        "text-main": "#1e293b",
+        "text-muted": "#64748b",
+      },
+      fontFamily: {
+          "display": ["Inter", "sans-serif"]
+      },
+      borderRadius: {
+          "DEFAULT": "1rem",
+          "lg": "2rem",
+          "xl": "3rem",
+          "full": "9999px"
+      },
+      backgroundImage: {
+          'grass-pattern': "linear-gradient(to bottom, #dcfce7 0%, #f0fdf4 100%)",}
+    }, */
